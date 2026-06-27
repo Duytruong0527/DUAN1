@@ -12,11 +12,11 @@ body {
   --font-heading: "Sen", sans-serif;
   --primary-color: #ffb900;
 }
-.content {
+.container {
   width: 1170px;
   margin: 0 auto;
 }
-.header-fix {
+.site-header {
   background: #fffcf4;
   position: sticky;
   z-index: 1;
@@ -42,11 +42,11 @@ a {
   font-weight: 600;
   position: relative;
 }
-.navbar li.active a {
+.navbar li.is-active a {
   color: #171100;
   font-weight: 600;
 }
-.navbar li.active a::after {
+.navbar li.is-active a::after {
   content: "";
   width: 12px;
   height: 2px;
@@ -57,7 +57,7 @@ a {
   bottom: 6px;
   left: 21px;
 }
-.navbar .btn-sign {
+.navbar .btn-sign-in {
   min-width: 144px;
   margin-left: 49px;
 }
@@ -68,7 +68,7 @@ a {
   color: #171100;
   font-weight: 600;
 }
-.hero-wrap h1 {
+.hero-section h1 {
   color: #171100;
   font-size: 58px;
   font-weight: 700;
@@ -76,20 +76,20 @@ a {
   letter-spacing: -1.16px;
   font-family: var(--font-heading);
 }
-.hero-wrap h1 + p {
+.hero-section h1 + p {
   width: 470px;
 }
-.hero-wrap .action-link {
+.hero-section .cta-link {
   width: 180px;
   height: 64px;
   border-radius: 32px;
 }
-.hero-wrap {
+.hero-section {
   padding-top: 72px;
   padding-bottom: 65px;
   background: #fffcf4;
 }
-.hero-wrap .action {
+.hero-section .actions {
   display: flex;
   margin-top: 38px;
 }
@@ -109,16 +109,16 @@ a {
   line-height: 50px;
   border-radius: 999px;
 }
-.hero-wrap .guy-learn {
+.hero-section .hero-copy {
   margin-top: 64px;
   margin-left: 230px;
   width: 51%;
 }
-.hero-wrap .img-block {
+.hero-section .hero-media {
   width: 49%;
   position: relative;
 }
-.hero-wrap .evalute {
+.hero-section .hero-stats-card {
   width: 270px;
   height: 244px;
   border-radius: 12px;
@@ -128,22 +128,22 @@ a {
   right: -100px;
   bottom: 48px;
 }
-.hero-wrap .evalute .score-trend {
+.hero-section .hero-stats-card .stat-item {
   display: flex;
 }
-.hero-wrap .img-block .score-trend {
+.hero-section .hero-media .stat-item {
   gap: 28px;
 }
-.hero-wrap .img-block .evalute-trends {
+.hero-section .hero-media .hero-stats-card-list {
   padding: 24px 24px;
 }
-.hero-wrap .score-trend .label {
+.hero-section .stat-item .label {
   color: #5f5b53;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px; /* 185.714% */
 }
-.hero-wrap .score-trend .title {
+.hero-section .stat-item .title {
   color: #171100;
   font-size: 18px;
   font-weight: 600;
@@ -155,11 +155,11 @@ a {
   line-height: 64px;
 }
 .btn-feature,
-.btn-coure:hover {
+.btn-book-now:hover {
   background-color: var(--primary-color);
   cursor: pointer;
 }
-.score-trend:nth-child(2) {
+.stat-item:nth-child(2) {
   margin: 22px 0;
 }
 
@@ -179,18 +179,18 @@ a {
 .line-clamp.line-clamp-2 {
   -webkit-line-clamp: var(--line-clamp, 2);
 }
-.guy-learn p {
+.hero-copy p {
   margin-top: 22px;
 }
-.action .icon-watch {
+.actions .watch-video-icon {
   margin-left: 28px;
 }
-.action .btn-watch {
+.actions .watch-video {
   gap: 8px;
   display: flex;
   align-items: center;
 }
-.btn-watch p {
+.watch-video span {
   color: #171100;
   font-size: 18px;
   font-weight: 600;
@@ -198,24 +198,24 @@ a {
   display: flex;
   align-items: center;
 }
-.guy-learn .stats {
+.hero-copy .hero-stats {
   margin-top: 48px;
 }
-.guy-learn .stats p {
+.hero-copy .hero-stats span {
   color: #5f5b53;
   font-size: 18px;
   font-weight: 400;
   line-height: 30px; /* 166.667% */
 }
-.guy-learn .stats .row {
+.hero-copy .hero-stats .row {
   gap: 28px;
   margin-top: 15px;
 }
-.populator {
+.courses-section {
   padding: 65px 0;
   margin-top: 135px;
 }
-.populator .section-header {
+.courses-section .section-header {
   display: flex;
   justify-content: center;
 }
@@ -235,36 +235,36 @@ a {
   margin-top: 16px;
   line-height: 30px; /* 166.667% */
 }
-.populator .section-header .arrow {
+.courses-section .section-header .section-controls {
   display: flex;
   padding-top: 42px;
   margin-left: auto;
   gap: 18px;
 }
-.populator .list-coure .img {
+.courses-section .course-list .img {
   width: 100%;
   height: 278px;
   border-radius: 12px 12px 0 0;
   border-radius: unset;
 }
-.list-coure .item {
+.course-list .card {
   border-radius: 12px;
   overflow: hidden;
 }
-.populator .list-coure {
+.courses-section .course-list {
   display: flex;
   gap: 30px;
   margin-top: 55px;
 }
-.populator .item {
+.courses-section .card {
   width: calc(33.33% - 20px);
   border: 1px solid #e2dfda;
 }
-.populator .item:hover {
+.courses-section .card:hover {
   border-color: transparent;
   box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
 }
-.populator .control-btn {
+.courses-section .control-button {
   border: 1px solid var(--primary-color);
   display: flex;
   align-items: center;
@@ -274,7 +274,7 @@ a {
   width: 40px;
   height: 40px;
 }
-.populator .control-btn.btn-active {
+.courses-section .control-button.is-active {
   background: #ffb900;
 }
 .row {
@@ -282,26 +282,26 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.populator .item .row-disten {
+.courses-section .card .row-spaced {
   margin-top: 12px;
 }
-.populator .item .review {
+.courses-section .card .review {
   display: flex;
 }
-.populator .row span {
+.courses-section .row span {
   color: #fea31b;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px; /* 175% */
 }
-.body .row .Price,
-.populator .row .title {
+.card-body .row .price,
+.courses-section .row .title {
   color: #171100;
   font-size: 18px;
   font-weight: 600;
   line-height: 30px; /* 166.667% */
 }
-.list-coure .body .desc {
+.course-list .card-body .desc {
   color: #5f5b53;
   width: 326px;
   font-size: 14px;
@@ -309,34 +309,34 @@ a {
   margin-top: 6px;
   line-height: 26px; /* 185.714% */
 }
-.list-coure .body .btn-hero {
+.course-list .card-body .btn-book-now {
   width: 118px;
   height: 50px;
 }
-.list-coure .body {
+.course-list .card-body {
   padding: 16px 22px 22px;
   background-color: #ffff;
 }
-.aboutme {
+.testimonials-section {
   padding: 96px 0;
   background: #2e2100;
   margin-top: 135px;
 }
 
-.aboutme .testimonial-card .desc {
+.testimonials-section .testimonial-author .desc {
   color: #f7f7f7;
   font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 700;
   margin: 18px 0 4px 0;
 }
-.aboutme .testimonial-card span {
+.testimonials-section .testimonial-author span {
   color: #bfbcb2;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px; /* 185.714% */
 }
-.aboutme .testimonial-card {
+.testimonials-section .testimonial-author {
   width: 34%;
 }
 .dots {
@@ -351,11 +351,11 @@ a {
   background: #634700;
   cursor: pointer;
 }
-.dot.active {
+.dot.is-active {
   cursor: default;
   background: #ffb900;
 }
-.aboutme blockquote {
+.testimonials-section blockquote {
   width: 740px;
   color: #fff;
   font-size: 26px;
@@ -364,68 +364,68 @@ a {
   line-height: 40px;
   margin-left: 30px;
 }
-.aboutme .desc-about {
+.testimonials-section .testimonial-quote {
   width: 66%;
 }
-.feedback-list {
+.testimonials-list {
   display: flex;
   overflow: hidden;
 }
-.feature {
+.feature-section {
   padding: 65px 0;
   margin-top: 135px;
 }
-.feature .img-block {
+.feature-section .hero-media {
   display: flex;
   gap: 0 30px;
 }
-.feature .img {
+.feature-section .img {
   width: 270px;
   height: 405px;
 }
-.feature .img-block .img-feature2 {
+.feature-section .hero-media .feature-image-large {
   width: 470px;
   height: 440px;
 }
-.feature .img-space {
+.feature-section .image-offset {
   margin-top: 34px;
 }
-.feature .feature-learn {
+.feature-section .feature-copy {
   width: 41%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-.feature2 .feature-learn {
+.feature-section--reverse .feature-copy {
   width: 49%;
 }
-.feature .feature-learn .desc {
+.feature-section .feature-copy .desc {
   font-size: 16px;
   line-height: 28px;
 }
-.feature .feature-learn span {
+.feature-section .feature-copy span {
   margin-top: 16px;
 }
-.feature .feature-learn .action {
+.feature-section .feature-copy .actions {
   margin-top: 32px;
 }
 .btn-feature {
   margin-top: 32px;
 }
-.our-core {
+.blog-section {
   padding: 96px 0;
   background: #fffcf4;
 }
-.our-core .Our-courses {
+.blog-section .section-intro {
   text-align: center;
 }
-.our-core .list-coure .title {
+.blog-section .course-list .title {
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
 }
-.our-core .body .desc::after {
+.blog-section .card-body .desc::after {
   content: "";
   width: 160px;
   height: 1px;
@@ -436,14 +436,14 @@ a {
   left: 0;
   bottom: 0;
 }
-.our-core .list-coure .post-day {
+.blog-section .course-list .post-day {
   display: flex;
 }
-.our-core .list-coure .btn,
-.our-core .list-coure .title {
+.blog-section .course-list .btn,
+.blog-section .course-list .title {
   margin-top: 12px;
 }
-.our-core .desc {
+.blog-section .desc {
   width: 448px;
   margin-left: auto;
   margin-right: auto;
@@ -452,7 +452,7 @@ a {
   padding-bottom: 12px;
   align-items: center;
 }
-.our-core .item .desc::before {
+.blog-section .card .desc::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -461,16 +461,16 @@ a {
   border-radius: 9999px;
   margin-right: 4px;
 }
-.our-core .list-coure .body {
+.blog-section .course-list .card-body {
   padding: 20px 20px 28px;
 }
-.our-core .item {
+.blog-section .card {
   flex-shrink: 0;
 }
-.our-core .list-coure {
+.blog-section .course-list {
   overflow: hidden;
 }
-.our-core .dots {
+.blog-section .dots {
   justify-content: center;
 }
 .footer {
@@ -527,24 +527,24 @@ a {
   left: 0;
   bottom: -14px;
 }
-.footer-row {
+.footer-grid {
   display: flex;
   padding-bottom: 38px;
   border-bottom: 1px solid #59554b;
 }
-.footer .footer-row .colum:first-child {
+.footer .footer-grid .footer-column:first-child {
   width: 35%;
 }
-.footer .footer-row .colum {
+.footer .footer-grid .footer-column {
   width: 21.6%;
 }
-.footer .copy-right {
+.footer .footer-copyright {
   padding: 28px 0;
   justify-content: center;
   display: flex;
   justify-content: center;
 }
-.footer .copy-right p {
+.footer .footer-copyright p {
   color: #807d74;
   font-size: 14px;
   font-weight: 400;
